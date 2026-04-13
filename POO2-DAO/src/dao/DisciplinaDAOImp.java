@@ -94,8 +94,6 @@ public class DisciplinaDAOImp implements DisciplinaDAO{
         }
     }
 
-    }
-
     @Override
     public Disciplina findById(Integer id) {
 
@@ -108,7 +106,7 @@ public class DisciplinaDAOImp implements DisciplinaDAO{
         try (ResultSet rs = pst.executeQuery()) {
 
             if (rs.next()) {
-                return new Disciplina(rs.getInt("idDisciplina"), rs.getString("nomeDisciplina"), rs.getInt("cargaHoraria"));
+                return new Disciplina(rs.getInt("id_disciplina"), rs.getString("nome_disciplina"), rs.getInt("carga_horaria"));
             }
             return null;
         }
@@ -128,7 +126,7 @@ public class DisciplinaDAOImp implements DisciplinaDAO{
         ) {
 
             while (rs.next()) {
-                disciplinas.add(new Disciplina(rs.getInt("idDisciplina"), rs.getString("nomeDisciplina"), rs.getInt("cargaHoraria"));
+                disciplinas.add(new Disciplina(rs.getInt("id_disciplina"), rs.getString("nome_disciplina"), rs.getInt("carga_horaria"));
             }
 
             return disciplinas;
