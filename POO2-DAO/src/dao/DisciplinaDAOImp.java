@@ -1,8 +1,6 @@
 package dao;
 
 import entidade.Disciplina;
-import jdbc.DB;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
